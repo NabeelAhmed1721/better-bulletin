@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Redirect, Route, Switch } from 'wouter';
 
+import CoursePage from './components/CoursePage';
 import Landing from './components/Landing';
 
 type Stats = {
@@ -22,13 +23,10 @@ export default function App() {
   return (
     // full screen
     <main className="flex h-screen w-screen">
-      {/* <Header /> */}
       <AnimatePresence>
         <Switch>
           <Route path="/course/:id">
-            {(params) => {
-              return <div>Course {params.id}</div>;
-            }}
+            {(params) => <CoursePage id={parseInt(params.id)} />}
           </Route>
           <Route path="/">{stats && <Landing stats={stats} />}</Route>
           <Route path="*">{() => <Redirect to="/" />}</Route>

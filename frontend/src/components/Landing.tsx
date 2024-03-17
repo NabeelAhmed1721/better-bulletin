@@ -4,11 +4,7 @@ import { motion } from 'framer-motion';
 import { IoSearch } from 'react-icons/io5';
 import { twMerge as merge } from 'tailwind-merge';
 
-enum SearchResultStatus {
-  Empty,
-  Loading,
-  Success,
-}
+import { SearchResultStatus } from '../util';
 
 type UndergraduateCourse = {
   id: number;
