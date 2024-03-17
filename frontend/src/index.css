@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-psu-200 text-white
+  }
+}
+
+body {
+    background-image: radial-gradient(#001E447F, 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+}
